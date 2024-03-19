@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Input = (props) => {
-    const { className, placeholder, value } = props;
+    const { className, placeholder, value, type, maxLength } = props;
 
   return (
-    <input className={className} value={value} type="text" placeholder={placeholder} />
+    <input type={type} maxLength={maxLength} className={className} value={value} placeholder={placeholder}
+    onChange={props.onCalcChange} />
   )
 }
 
